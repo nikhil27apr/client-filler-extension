@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Client Form Filler",
+  "version": "1.0.0",
+  "description": "Fill the Add Client form from Chrome or Edge using a popup.",
+  "permissions": ["tabs"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Client Form Filler",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

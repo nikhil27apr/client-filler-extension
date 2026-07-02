@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Form Filler</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #111827;
+        background: #f9fafb;
+      }
+      .wrap {
+        width: 280px;
+        padding: 16px;
+      }
+      h1 {
+        margin: 0 0 6px;
+        font-size: 18px;
+      }
+      p {
+        margin: 0 0 12px;
+        font-size: 12px;
+        color: #6b7280;
+      }
+      label {
+        display: block;
+        margin-top: 8px;
+        font-size: 12px;
+        color: #374151;
+      }
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 4px;
+        padding: 8px;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+      }
+      button {
+        width: 100%;
+        margin-top: 12px;
+        padding: 8px 10px;
+        border: 0;
+        border-radius: 6px;
+        cursor: pointer;
+        background: #2563eb;
+        color: #ffffff;
+        font-weight: 600;
+      }
+      #status {
+        margin-top: 10px;
+        min-height: 16px;
+        font-size: 12px;
+        color: #4b5563;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Client Form Filler</h1>
+      <p>Fill the current Add Client page.</p>
+
+      <label for="prefix">Prefix</label>
+      <input id="prefix" placeholder="PCA" />
+
+      <label for="index">Index</label>
+      <input
+        id="index"
+        type="number"
+        min="1"
+        placeholder="e.g. 1 (blank = no index)"
+      />
+
+      <label for="phone">Phone Number</label>
+      <input id="phone" placeholder="blank = auto" />
+
+      <label for="email">Email</label>
+      <input id="email" placeholder="blank = auto" />
+
+      <button id="fill">Fill Form</button>
+      <div id="status">Open the Add Client page and click Fill Form.</div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
